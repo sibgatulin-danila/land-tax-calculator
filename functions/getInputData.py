@@ -43,7 +43,32 @@ def getInputData():
 
     plotSize = round(float(input()), 2)
 
-    return dateStart, dateFinish, cadastralValue, target, plotSize 
+
+    # Доля владения
+    print()
+    print('Введите долю владения')
+    print('Доля владения от 0 до 1:')
+
+    partOfLand = round(float(input()), 3)
+
+
+    # Коэффициент строительства
+    print()
+    print('Введите коэффициент строительства')
+    print('Коэффициент от 0 до 1')
+
+    buildingRate = round(float(input()), 2)
+
+
+    # Считать ли льготы
+    print()
+    print('Льготная земля?')
+    print('1 - Да, 0 - нет:')
+
+    isExemption = bool(int(input()))
+
+
+    return dateStart, dateFinish, cadastralValue, target, plotSize, partOfLand, buildingRate, isExemption 
 
 def getInputDataTest():
-    return '2020-11-20', '2021-11-20', 20000.10, 1, 700
+    return '2020-11-20', '2021-11-20', 20000.10, 1, 700, 1, 1, 1

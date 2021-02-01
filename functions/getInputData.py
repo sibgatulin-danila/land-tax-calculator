@@ -71,4 +71,4 @@ def getInputData():
     return dateStart, dateFinish, cadastralValue, target, plotSize, partOfLand, buildingRate, isExemption 
 
 def getInputDataTest():
-    return '2020-11-20', '2021-11-20', 20000.10, 1, 700, 1, 1, 1
+    return '2021-01-01', '2021-12-15', 200000.10, 1, 700, 1, 1, 1

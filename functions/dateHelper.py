@@ -1,14 +1,15 @@
 from datetime import datetime
 
-
 def getOwnershipYears(dateStart, dateFinish):
     start = datetime.strptime(dateStart, "%Y-%m-%d")
     finish = datetime.strptime(dateFinish, "%Y-%m-%d")
 
     return finish.year - start.year
 
+
 def isLowerThenHalfOfMonth(date):
     day = datetime.strptime(date, "%Y-%m-%d").day
+    
     return day <= 15
 
 
@@ -30,7 +31,7 @@ def getMonthInQuarter(quarter, dateStart, dateFinish):
         lastMonthOfQuarter = 12
         firstMonthOfQuarter = 10
 
-    for x in range(firstMonthOfQuarter, lastMonthOfQuarter):
+    for x in range(firstMonthOfQuarter, lastMonthOfQuarter + 1):
         if (x < startMonth or x > finishMonth):
             continue
         if (x == startMonth):

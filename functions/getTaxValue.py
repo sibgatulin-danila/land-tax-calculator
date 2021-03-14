@@ -12,10 +12,9 @@ def getTaxValue(target):
 
 
 def calculateCadastralValueWithPrevileges(cadastralValue, isExemption, plotSize):
-    if (isExemption == False):
-        return cadastralValue / 1200
-    
     if (plotSize < 600):
         return 0
+    if (isExemption):
+        return cadastralValue * (plotSize - 600) / plotSize
 
-    return cadastralValue * (plotSize - 600) / plotSize
+    return cadastralValue

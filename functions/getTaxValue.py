@@ -1,4 +1,3 @@
-
 def getTaxValue(target):
     if (
         target == 1
